@@ -1,0 +1,56 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ConsoleApplication4.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ReadData.cpp
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(52): warning C4018: “<”: 有符号/无符号不匹配
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(81): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(85): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(89): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(93): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(97): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(105): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(108): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(111): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(114): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(117): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(120): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(133): warning C4018: “<”: 有符号/无符号不匹配
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(159): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(163): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(167): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(171): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(175): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(183): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(187): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(191): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(195): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(199): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(203): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(217): warning C4018: “<”: 有符号/无符号不匹配
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(242): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+e:\realsense\emotion classifier\emotion classifier\readdata.cpp(246): warning C4244: “=”: 从“double”转换到“pxcF32”，可能丢失数据
+  PXCFaceData.cpp
+  main.cpp
+e:\realsense\emotion classifier\emotion classifier\main.cpp(28): warning C4018: “<”: 有符号/无符号不匹配
+e:\realsense\emotion classifier\emotion classifier\main.cpp(61): warning C4476: "printf": 格式说明符中的类型字段字符“,”未知
+e:\realsense\emotion classifier\emotion classifier\main.cpp(61): warning C4778: “printf”: 格式字符串“%\n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(72): warning C4476: "printf": 格式说明符中的类型字段字符“,”未知
+e:\realsense\emotion classifier\emotion classifier\main.cpp(72): warning C4778: “printf”: 格式字符串“%\n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(82): warning C4778: “printf”: 格式字符串“% \n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(92): warning C4476: "printf": 格式说明符中的类型字段字符“,”未知
+e:\realsense\emotion classifier\emotion classifier\main.cpp(92): warning C4778: “printf”: 格式字符串“%\n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(103): warning C4476: "printf": 格式说明符中的类型字段字符“,”未知
+e:\realsense\emotion classifier\emotion classifier\main.cpp(103): warning C4778: “printf”: 格式字符串“%\n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(113): warning C4476: "printf": 格式说明符中的类型字段字符“,”未知
+e:\realsense\emotion classifier\emotion classifier\main.cpp(113): warning C4778: “printf”: 格式字符串“%\n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(123): warning C4778: “printf”: 格式字符串“% \n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(133): warning C4476: "printf": 格式说明符中的类型字段字符“,”未知
+e:\realsense\emotion classifier\emotion classifier\main.cpp(133): warning C4778: “printf”: 格式字符串“%\n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(143): warning C4778: “printf”: 格式字符串“%\n”未终止
+e:\realsense\emotion classifier\emotion classifier\main.cpp(153): warning C4476: "printf": 格式说明符中的类型字段字符“,”未知
+e:\realsense\emotion classifier\emotion classifier\main.cpp(153): warning C4778: “printf”: 格式字符串“%\n”未终止
+  FeatureState.cpp
+  Feature.cpp
+  EuclideanFeature.cpp
+  AngleFeature.cpp
+  正在生成代码...
+  Emotion Classifier.vcxproj -> E:\RealSense\Emotion Classifier\Debug\Emotion Classifier.exe
+  Emotion Classifier.vcxproj -> E:\RealSense\Emotion Classifier\Debug\Emotion Classifier.pdb (Full PDB)
