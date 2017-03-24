@@ -148,15 +148,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AngleFeature.cpp" />
-    <ClCompile Include="EuclideanFeature.cpp" />
-    <ClCompile Include="Feature.cpp" />
-    <ClCompile Include="FeatureState.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="PXCFaceData.cpp" />
-    <ClCompile Include="ReadData.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Feature.h" />
     <ClInclude Include="FeatureState.h" />
     <ClInclude Include="PXCFaceData.h" />
@@ -165,6 +156,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AngleFeature.cpp" />
+    <ClCompile Include="src\EuclideanFeature.cpp" />
+    <ClCompile Include="src\Feature.cpp" />
+    <ClCompile Include="src\FeatureState.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\PXCFaceData.cpp" />
+    <ClCompile Include="src\ReadData.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
