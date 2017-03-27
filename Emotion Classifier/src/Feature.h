@@ -1,5 +1,7 @@
 #pragma once
 #include "PXCFaceData.h"
+#include "iostream"
+
 class Feature
 {
 public:
@@ -23,7 +25,7 @@ class EuclideanFeature :public Feature
 public:
 	EuclideanFeature(PXCFaceData *facedata);
 	void CatureFeature(PXCFaceData facedata);
-	std::vector< std::vector<double> > uclideanList();
+	std::vector< std::vector<double> > getUList();
 
 	
 private:
@@ -108,5 +110,22 @@ private:
 class AngleFeature :public Feature
 {
 public:
+	AngleFeature(PXCFaceData *facedata);
 	void CatureFeature(PXCFaceData facedata);
+	std::vector< std::vector<double> > getAList();
+
+private:
+	enum Mouth {
+		//嘴角下拉 （61，33，58）（61，39，64） up
+
+		//嘴角张大（47，51） up
+
+		//嘴角上扬（30，33，56）（32，39，66）down
+	};
+
+	enum Brow {
+		//眼睛变小（12，14，16）（20，22，24）down
+
+		//眼睛变大（12，14，16）（20，22，24）up
+	};
 };

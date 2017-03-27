@@ -15,23 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="facedataStruct.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="PXCFaceData.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ReadData.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Feature.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FeatureState.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
@@ -56,5 +39,22 @@
     <ClCompile Include="src\ReadData.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\facedataStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Feature.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FeatureState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PXCFaceData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ReadData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

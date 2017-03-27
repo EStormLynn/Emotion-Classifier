@@ -2,8 +2,10 @@
 #include "iostream"
 
 
+
 std::vector<double> euclFeature(26);
 static std::vector < std::vector<double> > _euclideanList;
+
 EuclideanFeature::EuclideanFeature(PXCFaceData *face)
 {
 	_euclideanList.clear();
@@ -34,7 +36,7 @@ void EuclideanFeature::CatureFeature(PXCFaceData facedata)
 	}
 }
 
-std::vector < std::vector<double> > EuclideanFeature::uclideanList()
+std::vector < std::vector<double> > EuclideanFeature::getUList()
 {
 	return _euclideanList;
 }
