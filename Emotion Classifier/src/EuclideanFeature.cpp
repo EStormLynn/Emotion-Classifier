@@ -17,7 +17,7 @@ EuclideanFeature::EuclideanFeature(PXCFaceData *face)
 
 void EuclideanFeature::CatureFeature(PXCFaceData facedata)
 {
-	int a[26][2] ={ { 0,0 },{ 4,0 },{ 9,5 },{ 0,5 },{ 10,18 },{ 0,10 },
+	int a[26][2] ={ { 0,0 },{ 4,0 },{ 9,5 },{ 0,5 },{ 33,39 },{ 0,10 },
 	{ 5,18 },{ 4,14 },{ 9,22 },{ 10,14 },{ 18,22 },
 	{ 12,16 },{ 20,24 },{ 10,30 },{ 18,32 },{ 14,33 },
 	{ 22,39 },{ 30,33 },{ 32,39 },{ 29,47 },{ 47,51 },

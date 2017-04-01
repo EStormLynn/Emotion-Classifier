@@ -20,7 +20,7 @@ public:
 
 	void InitState();
 	void MyEmotionState();
-	double CompareState(MapST myState, MapST eMotionState);  //myState数据的特征状态，eMotionState基本表情的特征状态
+	double CompareState(MapST myState, MapST eMotionState,int id);  //myState数据的特征状态，eMotionState基本表情的特征状态
 
 
 	~FeatureState();

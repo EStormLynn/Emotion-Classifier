@@ -39,7 +39,7 @@ private:
 		//3 右眼眉毛内边界点-左眼眉毛内边界点   (0,5)
 		EYEBROW_RIGHT_RIGHT_to_LEFT_RIGHT,
 
-		//4 右眼内眼角点-左眼内眼角点           (10,18)
+		//4 右嘴角点-左嘴角点           (33,39)
 		EYELID_RIGHT_LEFT_to_LEFT_RIGHT,
 
 		//5 右眼眉毛内边界点-右眼内眼角点       (0,10)

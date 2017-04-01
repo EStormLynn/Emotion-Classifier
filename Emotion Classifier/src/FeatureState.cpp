@@ -14,22 +14,22 @@ FeatureState::FeatureState(MapST state)
 {
 	InitState();
 	
-	double happy = CompareState(state, _happyState);
+	double happy = CompareState(state, _happyState,1);
 	ans.push_back(std::make_pair(happy, "happy"));
 
-	double suprise = CompareState(state, _supriseState);
+	double suprise = CompareState(state, _supriseState,2);
 	ans.push_back(std::make_pair(suprise, "suprise"));
 
-	double sadness = CompareState(state, _sadnessState);
+	double sadness = CompareState(state, _sadnessState,3);
 	ans.push_back(std::make_pair(sadness, "sadness"));
 
-	double angry = CompareState(state, _angryState);
+	double angry = CompareState(state, _angryState,4);
 	ans.push_back(std::make_pair(angry, "angry"));
 
-	double fear = CompareState(state, _fearState);
+	double fear = CompareState(state, _fearState,5);
 	ans.push_back(std::make_pair(fear, "fear"));
 
-	double disgust = CompareState(state, _disgustState);
+	double disgust = CompareState(state, _disgustState,6);
 	ans.push_back(std::make_pair(disgust, "disgust"));
 
 	sort(ans.begin(), ans.end());
@@ -95,15 +95,66 @@ bool operator ==(State s1, State s2)
 	return s1.stateName == s2.stateName;
 }
 
-double FeatureState::CompareState(MapST myState, MapST eMotionState)
+double FeatureState::CompareState(MapST myState, MapST eMotionState,int Num)
 {
-	double similarity=0.0;
+	double similarity = 0.2;
+
+	switch (Num)
+	{
+	case 1://happy
+		if (myState.count("嘴角上扬"))
+			similarity = 0.5;
+		break;
+	case 2://suprise
+		if (myState.count("眉毛中间挤压")|| myState.count("眉毛下压（不往中间挤压）")|| myState.count("眼睛变小"))
+			return 0; break;
+	case 3://sadness
+		if (myState.count("眉毛抬高"))
+			return 0; break; 	
+	case 4://angry
+		similarity = 0.3;
+		if (myState.count("眉毛抬高"))
+			return 0; break;
+	case 5://fear
+		similarity = 0.5;
+		if (myState.count("眼睛变大"))
+			similarity=1; 
+		//if (myState.count("嘴巴张大"))
+		//{
+		//	State E;
+		//	E.stateName = "嘴部微张";
+		//	E.i = myState["嘴巴张大"].i;
+		//	E.d = myState["嘴巴张大"].d;
+		//	myState.insert(std::make_pair("嘴部微张", E));
+		//}
+			
+		break;
+	case 6://disgust
+		if (myState.count("眉毛中间挤压"))
+		{
+				State E;
+				E.stateName = "眉毛下压（不往中间挤压）";
+				E.i = myState["眉毛中间挤压"].i;
+				E.d = myState["眉毛中间挤压"].d;
+				myState.insert(std::make_pair("眉毛下压（不往中间挤压）", E));
+		}
+		//	return 0; break;
+	default:
+		break;
+	}
+
+	
 	MapST::iterator iter = eMotionState.begin();
 	while (iter != eMotionState.end())
 	{
 		std::string ss = iter->first;
 		if (myState[ss] == iter->second)
+		{
+			//similarity += abs(myState[ss].d)*iter->second.d;
+			
 			similarity += iter->second.i*iter->second.d;
+
+		}
 		iter++;
 	}
 	similarity /= eMotionState.size();
@@ -206,7 +257,7 @@ void FeatureState::DisgustState()
 {
 	State B4, E1;
 
-	B4.stateName = "眉毛抬高";
+	B4.stateName = "眉毛下压（不往中间挤压）";
 	B4.i = 1;
 	B4.d = 1.0;
 	_disgustState.insert(std::make_pair(B4.stateName, B4));

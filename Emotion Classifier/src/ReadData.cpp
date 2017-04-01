@@ -249,7 +249,7 @@ void ReadData::Anal_CK(std::string str)
 			break;
 		}
 	}
-	std::cout << v_s.size() << std::endl;
+	std::cout << ">" << std::endl;
 }
 #pragma endregion
 

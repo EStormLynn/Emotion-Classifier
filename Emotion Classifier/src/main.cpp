@@ -16,11 +16,11 @@ int main()
 
 	ReadData readdata(dir,face);
 
-	//PXCFaceData
-	
-
 	EuclideanFeature euclideanFea(face);
 	AngleFeature angleFea(face);
+
+
+	printf("-----------------------\n");
 
 	std::vector < std::vector<double> > eList,aList;   //脸部特征链表，节点为每帧所有特征
 	eList = euclideanFea.getUList();
@@ -33,7 +33,7 @@ int main()
 	const int aNum = aList[1].size();
 	
 	std::vector<double> temp;
-	for (int i = 0; i < eNum; i++)
+	for (int i = 0; i < eList.size() - 1; i++)
 	{
 		temp.clear();
 		for (int j = 0; j < eNum; j++)
@@ -45,7 +45,7 @@ int main()
 		eDeltaList.push_back(temp);
 	}
 
-	for (int i = 0; i < aNum - 1; i++)
+	for (int i = 0; i < eList.size() - 1; i++)
 	{
 		temp.clear();
 		for (int j = 0; j < aNum; j++)
@@ -74,6 +74,19 @@ int main()
 		cntMe[i] = std::make_pair(tag, del);
 		//std::cout << del << std::endl;
 	}
+	for (int i = 1; i < aNum; i++)
+	{
+		double del = (aList.back()[i] - aList.front()[i]) / aList.front()[i];
+
+		int tag = 0;
+		if (del > 0.05)
+			tag = 1;
+		else if (del < -0.05)
+			tag = -1;
+
+		cntMa[i] = std::make_pair(tag, del);
+		//std::cout << del << std::endl;
+	}
 
 	MapST state;
 	if (cntMe[11].first < 0 || cntMe[12].first < 0)
@@ -97,17 +110,17 @@ int main()
 		state[E2.stateName] = E2;
 	}
 
- 	if (cntMe[20].first > 0)
+ 	if (cntMe[20].first > 0 && cntMe[4].second < 0)
 	{
-		printf("嘴巴张大M1了:%f % \n", cntMe[20].second);
+		printf("嘴巴张大M1了:%f % \n", cntMe[20].second/100);
 		State M1;
 		M1.stateName = "嘴巴张大";
 		M1.i = 1;
-		M1.d = cntMe[20].second;
+		M1.d = cntMe[20].second/100;
 		state[M1.stateName] = M1;
 	}
 
- 	if (cntMe[22].first < 0 || cntMe[23].first < 0)		
+	if (cntMe[22].first < 0 || cntMe[23].first < 0)
 	{
 		printf("嘴角下拉M2了:%f %,%f %\n", cntMe[22].second, cntMe[23].second);
 		State M2;
@@ -115,10 +128,9 @@ int main()
 		M2.i = 1;
 		M2.d = (cntMe[22].second + cntMe[23].second) / 2;
 		state[M2.stateName] = M2;
-	}
+	} 	
 
-	
- 	if (cntMe[17].first < 0 || cntMe[18].first < 0)	
+	if ((cntMe[17].first < 0 || cntMe[18].first < 0)&&(cntMe[17].second + cntMe[18].second<-0.05))
 	{
 		printf("嘴角上扬M3了:%f %,%f %\n", cntMe[17].second, cntMe[18].second);
 		State M3;
@@ -127,6 +139,22 @@ int main()
 		M3.d = (cntMe[17].second + cntMe[18].second) / 2;
 		state[M3.stateName] = M3;
 	}
+
+	if (cntMa[1].first < 0 && cntMa[2].first < 0 && cntMe[4].second > 0)
+	{
+		if (!state.count("嘴角上扬"))
+		{
+			printf("A嘴角下拉M2了:%f %,%f %\n", cntMa[1].second, cntMa[2].second);
+			State M2;
+			M2.stateName = "嘴角下拉";
+			M2.i = 1;
+			M2.d = (cntMa[1].second + cntMa[2].second) / 2;
+			state[M2.stateName] = M2;
+		}
+	}
+
+	
+
 
  	if (cntMe[19].first < 0 && cntMe[21].first > 0)
 	{
@@ -138,13 +166,14 @@ int main()
 		state[M4.stateName] = M4;
 	}
 
- 	if (cntMe[20].first > 0 && cntMe[20].second< 0.2)
+	if (cntMe[20].first > 0 && cntMe[20].second< 20)
+	//if (cntMe[20].first > 0)
 	{
-		printf("嘴部微张M5了:%f % \n", cntMe[20].second);
+		printf("嘴部微张M5了:%f % \n", cntMe[20].second/100);
 		State M5;
 		M5.stateName = "嘴部微张";
 		M5.i = 1;
-		M5.d = cntMe[20].second;
+		M5.d = cntMe[20].second/100;
 		state[M5.stateName] = M5;
 	}
 
@@ -170,7 +199,7 @@ int main()
 	
  	if (cntMe[5].first < 0 && cntMe[6].first < 0)
 	{
-		printf("眉毛中间挤压B3了::%f %,%f %\n", cntMe[5].second, cntMe[6].second);
+		printf("眉毛中间挤压B3了:%f %,%f %\n", cntMe[5].second, cntMe[6].second);
 
 		State B3;
 		B3.stateName = "眉毛中间挤压";
@@ -179,7 +208,7 @@ int main()
 		state[B3.stateName] = B3;
 	}
 
-
+	printf("-----------------------\n");
 	
 	FeatureState featureState(state);
 	

@@ -37,7 +37,7 @@ void AngleFeature::CatureFeature(PXCFaceData facedata)
 	for (auto iter = faceList.begin(); iter != faceList.end(); iter++)
 	{
 		int t = 1;
-		for (int i = 1; i <= usedAngleNum; i++)
+		for (int i = 0; i < usedAngleNum; i++)
 		{
 			angleFeature[t++] = GetAngle(iter->landmarkPoint[(a[i][0])].image, iter->landmarkPoint[(a[i][1])].image, iter->landmarkPoint[(a[i][2])].image);
 		}
