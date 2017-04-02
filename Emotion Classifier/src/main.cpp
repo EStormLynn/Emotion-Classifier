@@ -11,7 +11,7 @@
 int main()
 {
 
-	std::string dir = R"(C:\Users\SeekHit\Desktop\emotion test\S054\002\CKData.txt)";
+	std::string dir = R"(E:\RealSense\CK+\Landmarks_track,2017-02-24\S046\004\CKData.txt)";
 	PXCFaceData *face = new PXCFaceData();
 
 	ReadData readdata(dir,face);

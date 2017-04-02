@@ -104,6 +104,8 @@ double FeatureState::CompareState(MapST myState, MapST eMotionState,int Num)
 	case 1://happy
 		if (myState.count("嘴角上扬"))
 			similarity = 0.5;
+		if (myState.count("眉毛中间挤压"))
+			similarity = -0.2;
 		break;
 	case 2://suprise
 		if (myState.count("眉毛中间挤压")|| myState.count("眉毛下压（不往中间挤压）")|| myState.count("眼睛变小"))
