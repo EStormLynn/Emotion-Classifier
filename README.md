@@ -50,9 +50,9 @@ tree /f
 
 函数|说明
 ---|---
-    `void Anal_RS(std::string str);`				    |解析RealSense数据,32个标记点
-	`void Anal_RS78(std::string str);`				|解析RealSense数据,78个标记点
-	`void Anal_CK(std::string str);`					|解析CK数据,78个标记点
+`void Anal_RS(std::string str);`				    |解析RealSense数据,32个标记点
+`void Anal_RS78(std::string str);`				|解析RealSense数据,78个标记点
+`void Anal_CK(std::string str);`					|解析CK数据,78个标记点
 
 
 ### 数据存储结构 
@@ -60,7 +60,7 @@ tree /f
 **78个标记点**（包括世界坐标，屏幕坐标）信息
 **头部中心位置**（世界坐标）
 **头部姿态**（~~四元组表示~~欧拉角表示（方便分析）） 
-```
+```c++
 struct Face
 {
 	LandmarkPoint landmarkPoint[78];
