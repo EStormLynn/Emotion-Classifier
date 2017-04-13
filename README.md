@@ -1,6 +1,7 @@
 ﻿# Emotion-Classifier    
 ###Custom Classifier   
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)     
+
 自己编写的分类器，初步完成6种基本表情分类。    
 
 
@@ -112,11 +113,12 @@ struct PoseQuaternion
 
 ## 动态特征特征计算   
 包含欧氏距离特征和欧拉角度特征，读取图片序列数据，计算动态变量特征 
-<div align=center><img src="http://oo8jzybo8.bkt.clouddn.com/landmarkPoint.png" width="663" height="350" alt="程序界面"/></div>
+<div align=center><img src="http://oo8jzybo8.bkt.clouddn.com/landmarkPoint.png" width="663" height="450" alt="程序界面"/></div>
 
-**欧氏距离特征**    
-编号|特征点ID|名称|说明  
----|:---:|:---:|:---:  
+**欧氏距离特征**      
+
+编号|特征点ID|名称|说明     
+---|:---:|:---:|:---:     
 1|(4,0)|EYEBROW_RIGHT_RIGHT_to_RIGHT_LEFT|右眼眉毛外边界点 - 右眼眉毛内边界点
 2|(9,5)|EYEBROW_LEFT_RIGHT_to_LEFT_LEFT| 左眼眉毛外边界点-左眼眉毛内边界点   
 3|(0,5)|EYEBROW_RIGHT_RIGHT_to_LEFT_RIGHT|右眼眉毛内边界点-左眼眉毛内边界点   
@@ -141,7 +143,8 @@ struct PoseQuaternion
 22|(33,61)|		LIP_RIGHT_to_CHIN| 右嘴角点-下巴点                    
 23|(39,61)|		LIP_LEFT_to_CHIN| 左嘴角点-下巴点                    
 24|(29,10)|		NOSE_TIP_to_EYELID_RIGHT_LEFT| 鼻尖点-右眼内眼角点                
-25|(29,18)|		NOSE_TIP_to_EYELID_LEFT_RIGHT| 鼻尖点-左眼内眼角点                
+25|(29,18)|		NOSE_TIP_to_EYELID_LEFT_RIGHT| 鼻尖点-左眼内眼角点       
+
 **角度特征**   
 编号|特征点ID|名称|说明  
 ---|:---:|:---:|:---:  
