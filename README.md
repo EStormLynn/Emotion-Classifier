@@ -1,9 +1,8 @@
 ﻿# Emotion-Classifier    
-###Custom Classifier   
+### Custom Classifier   
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]() [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)     
 
 自己编写的分类器，初步完成6种基本表情分类。    
-
 
 项目主要分为6个部分   
 
