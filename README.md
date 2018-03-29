@@ -10,8 +10,7 @@
 1.数据解析    
   
 - [x] RealSense   
-- [x] CK+  
-- [ ] MMI   
+- [x] CK+    
 
 2.数据存储结构   
   
@@ -19,6 +18,7 @@
   
 - [x] 欧氏距离特征  
 - [x] 角度变化特征  
+- [x] Gabor特征  
 
 4.特征向量值->特征状态  
 5.特征状态编码匹配表情  
@@ -41,7 +41,9 @@ tree /f
             Feature.cpp                 //特征基类
             Feature.h
             FeatureState.cpp            //特征状态
-            FeatureState.h
+            FeatureState.h		
+            GaborFeature.h		//Gabor特征
+            GaborFeature.cpp
             main.cpp                
             PXCFaceData.cpp             //数据信息类
             PXCFaceData.h
