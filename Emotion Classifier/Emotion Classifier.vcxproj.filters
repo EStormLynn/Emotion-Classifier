@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AngleFeature.cpp">
@@ -39,6 +40,9 @@
     <ClCompile Include="src\ReadData.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GaborFeature.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\facedataStruct.h">
@@ -54,6 +58,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\ReadData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GaborFeature.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -46,6 +46,7 @@ void FeatureState::InitState()
 	State B1, B2, B3, B4;
 	State E1, E2;
 	State M1, M2, M3, M4, M5;
+	State E1;
 
 	B1.stateName = "眉毛抬高";
 	B2.stateName = "眉毛外撇";
@@ -61,6 +62,7 @@ void FeatureState::InitState()
 	M4.stateName = "嘴部合并，位置上移";
 	M5.stateName = "嘴部微张";
 
+	E1.stateName = "皱鼻";
 	mapState.insert(std::make_pair(B1.stateName, B1));
 	mapState.insert(std::make_pair(B2.stateName, B2));
 	mapState.insert(std::make_pair(B3.stateName, B3));
@@ -105,7 +107,7 @@ double FeatureState::CompareState(MapST myState, MapST eMotionState,int Num)
 		if (myState.count("嘴角上扬"))
 			similarity = 0.5;
 		if (myState.count("眉毛中间挤压"))
-			similarity = -0.2;
+			similarity = -0.5;
 		break;
 	case 2://suprise
 		if (myState.count("眉毛中间挤压")|| myState.count("眉毛下压（不往中间挤压）")|| myState.count("眼睛变小"))
@@ -114,21 +116,13 @@ double FeatureState::CompareState(MapST myState, MapST eMotionState,int Num)
 		if (myState.count("眉毛抬高"))
 			return 0; break; 	
 	case 4://angry
-		similarity = 0.3;
+		similarity = 0.5;
 		if (myState.count("眉毛抬高"))
 			return 0; break;
 	case 5://fear
 		similarity = 0.5;
 		if (myState.count("眼睛变大"))
 			similarity=1; 
-		//if (myState.count("嘴巴张大"))
-		//{
-		//	State E;
-		//	E.stateName = "嘴部微张";
-		//	E.i = myState["嘴巴张大"].i;
-		//	E.d = myState["嘴巴张大"].d;
-		//	myState.insert(std::make_pair("嘴部微张", E));
-		//}
 			
 		break;
 	case 6://disgust
@@ -144,18 +138,14 @@ double FeatureState::CompareState(MapST myState, MapST eMotionState,int Num)
 	default:
 		break;
 	}
-
 	
 	MapST::iterator iter = eMotionState.begin();
 	while (iter != eMotionState.end())
 	{
 		std::string ss = iter->first;
 		if (myState[ss] == iter->second)
-		{
-			//similarity += abs(myState[ss].d)*iter->second.d;
-			
+		{			
 			similarity += iter->second.i*iter->second.d;
-
 		}
 		iter++;
 	}

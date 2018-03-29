@@ -149,8 +149,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GaborFeature.cpp" />
     <ClCompile Include="src\AngleFeature.cpp" />
     <ClCompile Include="src\EuclideanFeature.cpp" />
     <ClCompile Include="src\Feature.cpp" />
@@ -160,6 +162,7 @@
     <ClCompile Include="src\ReadData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GaborFeature.h" />
     <ClInclude Include="src\facedataStruct.h" />
     <ClInclude Include="src\Feature.h" />
     <ClInclude Include="src\FeatureState.h" />

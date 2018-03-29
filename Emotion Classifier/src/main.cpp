@@ -3,7 +3,7 @@
 #include "ReadData.h"
 #include "Feature.h"
 #include "FeatureState.h"
-
+#include "FeatureState.h"
 
 #include "map"
 
@@ -11,7 +11,7 @@
 int main()
 {
 
-	std::string dir = R"(E:\RealSense\CK+\Landmarks_track,2017-02-24\S046\004\CKData.txt)";
+	std::string dir = R"(E:\RealSense\CK+\Landmarks_track,2017-02-24\S136\005\CKData.txt)";
 	PXCFaceData *face = new PXCFaceData();
 
 	ReadData readdata(dir,face);
@@ -196,15 +196,16 @@ int main()
 		B2.d = cntMe[3].second;
 		state[B2.stateName] = B2;
 	}
-	
- 	if (cntMe[5].first < 0 && cntMe[6].first < 0)
+	if (cntMe[3].first < 0)//2017/4/15 angry disgust 
+ 	//if (cntMe[5].first < 0 && cntMe[6].first < 0)
 	{
 		printf("üë�м伷ѹB3��:%f %,%f %\n", cntMe[5].second, cntMe[6].second);
 
 		State B3;
 		B3.stateName = "üë�м伷ѹ";
 		B3.i = 1;
-		B3.d = (cntMe[5].second + cntMe[6].second) / 2;
+		//B3.d = (cntMe[5].second + cntMe[6].second) / 2;
+		B3.d = cntMe[3].second;
 		state[B3.stateName] = B3;
 	}
 

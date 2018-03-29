@@ -4,7 +4,7 @@
     <Position X="1.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>QAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAA=</HashCode>
-      <FileName>Feature.h</FileName>
+      <FileName>src\Feature.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EuclideanFeature">
@@ -17,139 +17,160 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Feature.h</FileName>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAEAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Feature.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AngleFeature">
     <Position X="3" Y="3" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="AngleFeature::Mouth" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>src\Feature.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="AngleFeature::Brow" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>src\Feature.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Feature.h</FileName>
+      <HashCode>AAAAAAABAEAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Feature.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PXCFaceData" Collapsed="true">
     <Position X="5.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAQAAAAAEAAAAAAEAAA=</HashCode>
-      <FileName>PXCFaceData.h</FileName>
+      <HashCode>AAYAAAEAAUAAIAEEAAEAAAAAQAEAAEAAAACAAAAAAAQ=</HashCode>
+      <FileName>c:\Users\SeekHit\Documents\Visual Studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\include\pxcfacedata.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExpressionsData" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="ExpressionsData::FaceExpression" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>facedataStruct.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Struct Name="ExpressionsData::FaceExpressionResult" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>facedataStruct.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Struct>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PulseData" Collapsed="true">
     <Position X="8.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ReadData" Collapsed="true">
     <Position X="7" Y="1.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="ReadData::DataFrom" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>ReadData.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>gAAAgAAAAAABBQAABAAAAAAAAAIAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>ReadData.h</FileName>
+      <FileName>src\ReadData.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FeatureState" Collapsed="true">
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ADAAAAAAAAAAQAAAAAIAAAAgAAUAAAABAAgAAAAEAAA=</HashCode>
-      <FileName>FeatureState.h</FileName>
+      <FileName>src\FeatureState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GaborFeature" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMwAAAYCACACAAEAAAAAAIwRAAAgAAAAAAAACAAQBA=</HashCode>
+      <FileName>GaborFeature.h</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="LandmarkPointSource">
     <Position X="5.25" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="LandmarkPoint">
     <Position X="8.75" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAIIAAAAAAEAEAAAAAEAAAAAAAAAAAA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="HeadPosition">
     <Position X="7" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAAAAgAAAAAAAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="PoseEulerAngles">
     <Position X="7" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAIAAAAAAAgAAAAAEAAAAAAAAAAAAA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="PoseQuaternion">
     <Position X="8.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAhgAQAAAAA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="Face">
     <Position X="5.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAACIAQAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="State">
     <Position X="3" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAAAAAAAAA=</HashCode>
-      <FileName>FeatureState.h</FileName>
+      <FileName>src\FeatureState.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Typedef Name="MapST" Collapsed="true">
     <Position X="10.25" Y="7.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FeatureState.h</FileName>
+      <FileName>src\FeatureState.h</FileName>
     </TypeIdentifier>
   </Typedef>
   <Enum Name="LandmarkType" Collapsed="true">
     <Position X="8" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>FAAAAASgYEiQACEiAAIQAALQAAQBAISQBBgACgAAAAE=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="LandmarksGroupType" Collapsed="true">
     <Position X="5.25" Y="7.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEAAAAAAAAAACAEAAAAAAAAQCEAAAAAAKAEA=</HashCode>
-      <FileName>facedataStruct.h</FileName>
+      <FileName>src\facedataStruct.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="convtype" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>GaborFeature.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Mouth" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\AngleFeature.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Brow" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\AngleFeature.cpp</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Microsoft YaHei UI" Size="9" />
